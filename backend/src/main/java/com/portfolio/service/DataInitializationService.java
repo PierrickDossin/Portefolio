@@ -106,8 +106,41 @@ public class DataInitializationService implements CommandLineRunner {
         project6.setIsFeatured(true);
         project6.setDisplayOrder(6);
 
-        projectRepository.saveAll(Arrays.asList(project1, project2, project3, project4, project5, project6));
-        log.info("Created {} sample projects", 6);
+        Project project7 = new Project();
+        project7.setTitle("Finance Dashboard");
+        project7.setDescription("Interactive financial analytics dashboard with real-time data visualization, expense tracking, and budget management. Features dynamic charts, spending insights, and financial goal tracking.");
+        project7.setCategory(Project.ProjectCategory.WEB_DEVELOPMENT);
+        project7.setTags(Arrays.asList("React", "Data Visualization", "Finance", "Dashboard", "Charts"));
+        project7.setIconName("LineChart");
+        project7.setGradientFrom("#10B981");
+        project7.setGradientTo("#3B82F6");
+        project7.setIsFeatured(true);
+        project7.setDisplayOrder(7);
+
+        Project project8 = new Project();
+        project8.setTitle("Mobile Fitness Tracker");
+        project8.setDescription("Cross-platform mobile fitness application for tracking workouts, nutrition, and health metrics. Features progress visualization, workout plans, and achievement tracking with social sharing capabilities.");
+        project8.setCategory(Project.ProjectCategory.MOBILE_DEVELOPMENT);
+        project8.setTags(Arrays.asList("React Native", "Mobile", "Fitness", "Health Tracking", "Cross-platform"));
+        project8.setIconName("Activity");
+        project8.setGradientFrom("#F59E0B");
+        project8.setGradientTo("#EF4444");
+        project8.setIsFeatured(true);
+        project8.setDisplayOrder(8);
+
+        Project project9 = new Project();
+        project9.setTitle("SplitTracker - Expense Splitting App");
+        project9.setDescription("Smart expense splitting application with OCR receipt scanning. Automatically detects items and prices from photos, calculates fair splits, and tracks group expenses with payment reminders.");
+        project9.setCategory(Project.ProjectCategory.MOBILE_DEVELOPMENT);
+        project9.setTags(Arrays.asList("OCR", "Mobile", "Finance", "Computer Vision", "React Native"));
+        project9.setIconName("Receipt");
+        project9.setGradientFrom("#8B5CF6");
+        project9.setGradientTo("#EC4899");
+        project9.setIsFeatured(true);
+        project9.setDisplayOrder(9);
+
+        projectRepository.saveAll(Arrays.asList(project1, project2, project3, project4, project5, project6, project7, project8, project9));
+        log.info("Created {} sample projects", 9);
     }
 
     private void initializeSkills() {
