@@ -19,14 +19,13 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">About Me</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              About Me
+            </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Passionate about turning raw data into actionable insights through innovative engineering solutions
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -37,32 +36,29 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold text-white mb-4">My Journey</h3>
-            <p className="text-gray-300 leading-relaxed">
-              I&apos;m currently in my 3rd year of Applied Computer Science at <span className="text-purple-400 font-semibold">UCLL</span>, 
-              an associated school of <span className="text-purple-400 font-semibold">KU Leuven</span>, 
-              specializing in Data Engineering and Business Management. With 2 years 
-              of hands-on experience, I focus on building scalable data pipelines, 
-              developing full-stack applications, and implementing machine learning solutions.
+            <h3 className="text-xl font-semibold text-white mb-4">Background</h3>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              I&apos;m a 3rd year Applied Computer Science student at UCLL (associated with KU Leuven), 
+              focusing on Data Engineering and Business Management. I have 2 years of practical experience 
+              building data pipelines, full-stack applications, and machine learning solutions.
             </p>
-            <p className="text-gray-300 leading-relaxed">
-              My passion lies in transforming raw data into actionable insights and 
-              creating efficient data infrastructure. Through academic projects and 
-              practical experience, I&apos;ve developed expertise in modern data engineering 
-              tools, cloud platforms, and software development best practices.
+            <p className="text-gray-400 leading-relaxed mb-4">
+              My work involves creating scalable data infrastructure, implementing ETL processes, 
+              and developing applications that solve real problems. I&apos;m particularly interested 
+              in how data engineering intersects with business operations.
             </p>
             <div className="flex gap-4 pt-4">
               <a
                 href="#contact"
-                className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all hover:scale-105"
+                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all hover:shadow-lg hover:shadow-blue-500/25"
               >
-                Let&apos;s Connect
+                Contact
               </a>
               <a
                 href="#projects"
-                className="px-6 py-3 border border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all hover:scale-105"
+                className="px-6 py-3 border border-blue-500/30 text-white rounded-lg font-medium hover:border-blue-500/50 hover:bg-blue-500/10 transition-all"
               >
-                View Projects
+                Projects
               </a>
             </div>
           </motion.div>
@@ -81,10 +77,13 @@ const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-6 rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105 glow-box"
+                whileHover={{ y: -5 }}
+                className="bg-slate-900/50 p-6 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all backdrop-blur-sm"
               >
-                <stat.icon className="text-purple-400 mb-3" size={32} />
-                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-lg flex items-center justify-center mb-3">
+                  <stat.icon className="text-blue-400" size={24} />
+                </div>
+                <div className="text-2xl font-semibold text-white mb-1">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </motion.div>
             ))}

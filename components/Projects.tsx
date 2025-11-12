@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, Activity, BookOpen, Dumbbell, Database, Cloud, Workflow, BarChart, Server, GitBranch, Code, X, ArrowRight, Globe, Fish, Gamepad2, Brain, TrendingUp, Receipt, Sparkles, Zap } from "lucide-react";
+import { ExternalLink, Github, Activity, BookOpen, Dumbbell, Database, Cloud, Workflow, BarChart, Server, GitBranch, Code, X, ArrowRight, Globe, Fish, Gamepad2, Brain, TrendingUp, Receipt } from "lucide-react";
 import { useEffect, useState } from "react";
 import { projectApi, Project } from "@/lib/api";
 import { repositoryApi, CodeRepository } from "@/lib/repositoryApi";
@@ -103,28 +103,13 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-6 backdrop-blur-sm"
-          >
-            <Sparkles className="text-purple-400" size={20} />
-            <span className="text-purple-300 text-sm font-semibold">FEATURED WORK</span>
-          </motion.div>
-          
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-              Featured Projects
-            </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Projects
           </h2>
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-            A showcase of innovative solutions across <span className="text-purple-400 font-semibold">data engineering</span>, 
-            <span className="text-pink-400 font-semibold"> machine learning</span>, and 
-            <span className="text-blue-400 font-semibold"> full-stack development</span>
+          <p className="text-gray-400 text-lg max-w-2xl">
+            Selected work in data engineering, machine learning, and application development
           </p>
         </motion.div>
 
@@ -136,130 +121,87 @@ const Projects = () => {
             return (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5, type: "spring", bounce: 0.3 }}
-                whileHover={{ y: -12, scale: 1.02 }}
-                className="group relative cursor-pointer"
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                whileHover={{ y: -8 }}
+                className="group cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
-                {/* Main Card */}
-                <div className="relative h-full bg-gradient-to-br from-slate-900/95 via-purple-900/10 to-slate-900/95 backdrop-blur-2xl rounded-3xl border border-purple-500/20 overflow-hidden transition-all duration-500 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/25">
+                <div className="relative h-full bg-slate-900/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all overflow-hidden p-6 flex flex-col backdrop-blur-sm group-hover:shadow-xl group-hover:shadow-blue-500/10">
                   
-                  {/* Animated Gradient Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-pink-600/0 to-blue-600/0 group-hover:from-purple-600/10 group-hover:via-pink-600/5 group-hover:to-blue-600/10 transition-all duration-700" />
+                  {/* Subtle gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 via-purple-600/0 to-blue-600/0 group-hover:from-blue-600/5 group-hover:via-purple-600/5 group-hover:to-blue-600/5 transition-all duration-500" />
                   
-                  {/* Shine Effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                    <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 group-hover:left-full transition-all duration-1000" />
-                  </div>
-
-                  {/* Corner Glow */}
-                  <div className="absolute -top-20 -right-20 w-40 h-40 bg-purple-500/30 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                  <div className="relative p-7 flex flex-col h-full">
-                    {/* Icon Section */}
-                    <div className="relative mb-6">
-                      <motion.div 
-                        whileHover={{ rotate: 5, scale: 1.1 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                        className={`relative w-20 h-20 bg-gradient-to-br ${gradientClass} rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-500`}
-                      >
-                        <IconComponent className="text-white" size={36} />
-                        {/* Icon Glow */}
-                        <div className={`absolute inset-0 bg-gradient-to-br ${gradientClass} rounded-2xl blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-500`} />
-                      </motion.div>
-                      
-                      {/* Floating Badge */}
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: index * 0.1 + 0.2 }}
-                        className="absolute -top-2 -right-2"
-                      >
-                        <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg border-2 border-slate-900">
-                          <Zap className="text-white" size={18} />
-                        </div>
-                      </motion.div>
+                  <div className="relative z-10">
+                    {/* Icon */}
+                    <div className="mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:from-blue-600/30 group-hover:to-purple-600/30 transition-all">
+                        <IconComponent className="text-blue-400" size={24} />
+                      </div>
                     </div>
 
-                    {/* Category Badge */}
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 + 0.3 }}
-                      className="mb-4"
-                    >
-                      <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-300 rounded-full text-xs font-bold border border-purple-500/30 backdrop-blur-sm shadow-lg">
+                    {/* Category */}
+                    <div className="mb-3">
+                      <span className="inline-block px-3 py-1 bg-blue-500/10 text-blue-300 rounded text-xs border border-blue-500/20">
                         {project.category.replace('_', ' ')}
                       </span>
-                    </motion.div>
+                    </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-purple-200 group-hover:to-pink-200 transition-all duration-300 line-clamp-2">
+                    <h3 className="text-xl font-semibold mb-3 text-white line-clamp-2 group-hover:text-blue-300 transition-colors">
                       {project.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-400 mb-6 leading-relaxed text-sm flex-grow group-hover:text-gray-300 transition-colors line-clamp-3">
+                    <p className="text-gray-400 mb-4 text-sm flex-grow line-clamp-3">
                       {project.description}
                     </p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tags.slice(0, 3).map((tag, i) => (
-                        <motion.span
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.slice(0, 3).map((tag) => (
+                        <span
                           key={tag}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          whileHover={{ scale: 1.05, y: -2 }}
-                          transition={{ delay: index * 0.05 + i * 0.1 }}
-                          className="px-3 py-1.5 bg-slate-800/60 text-purple-300 rounded-xl text-xs font-semibold border border-purple-500/20 backdrop-blur-sm hover:border-purple-400/40 hover:bg-purple-500/20 transition-all shadow-sm"
+                          className="px-2 py-1 bg-slate-800/60 text-gray-400 rounded text-xs border border-blue-500/10"
                         >
                           {tag}
-                        </motion.span>
+                        </span>
                       ))}
                       {project.tags.length > 3 && (
-                        <span className="px-3 py-1.5 bg-slate-800/60 text-gray-400 rounded-xl text-xs font-semibold border border-gray-600/20">
+                        <span className="px-2 py-1 bg-slate-800/60 text-gray-500 rounded text-xs">
                           +{project.tags.length - 3}
                         </span>
                       )}
                     </div>
 
                     {/* Actions */}
-                    <div className="flex items-center gap-4 pt-5 border-t border-purple-500/10">
-                      <motion.button
-                        whileHover={{ scale: 1.05, x: 3 }}
-                        whileTap={{ scale: 0.95 }}
+                    <div className="flex items-center gap-3 pt-4 border-t border-blue-500/10">
+                      <button
                         onClick={(e) => {
                           e.stopPropagation();
                           setSelectedProject(project);
                         }}
-                        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg text-sm font-bold hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-purple-500/50"
+                        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all hover:shadow-lg hover:shadow-blue-500/25"
                       >
                         <Code size={16} />
                         <span>View Code</span>
-                      </motion.button>
+                      </button>
                       
                       {project.githubUrl && (
-                        <motion.a
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
+                        <a
                           href={project.githubUrl}
-                          className="p-2 bg-slate-800/50 text-purple-400 hover:text-purple-300 rounded-lg transition-all border border-purple-500/20 hover:border-purple-500/40 backdrop-blur-sm"
+                          className="p-2 bg-slate-800/50 text-blue-400 hover:text-blue-300 rounded-md transition-colors border border-blue-500/20"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <Github size={18} />
-                        </motion.a>
+                        </a>
                       )}
                     </div>
                   </div>
-
-                  {/* Bottom Gradient Accent */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </motion.div>
             );
@@ -276,25 +218,14 @@ const Projects = () => {
             className="text-center mt-16"
           >
             <Link href="/projects">
-              <motion.div
-                whileHover={{ scale: 1.05, y: -2 }}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all relative overflow-hidden group"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all hover:shadow-xl hover:shadow-blue-500/25"
               >
-                {/* Animated Background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-700 via-pink-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Shine Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:left-full transition-all duration-700" />
-                </div>
-                
-                <span className="relative z-10 flex items-center gap-3">
-                  <Sparkles size={24} />
-                  View All {projects.length} Projects
-                  <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
-                </span>
-              </motion.div>
+                View All {projects.length} Projects
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </motion.button>
             </Link>
           </motion.div>
         )}

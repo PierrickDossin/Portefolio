@@ -50,13 +50,13 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Get In Touch</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Contact
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Let&apos;s discuss how we can work together to solve your data challenges
+          <p className="text-gray-400 text-lg max-w-2xl">
+            Let&apos;s connect
           </p>
         </motion.div>
 
@@ -67,11 +67,11 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-slate-900/50 to-purple-900/20 p-8 rounded-2xl border border-purple-500/20 backdrop-blur-sm"
+            className="bg-slate-900/50 p-8 rounded-lg border border-blue-500/20 backdrop-blur-sm"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="name" className="block text-gray-300 mb-2">
                   Name
                 </label>
                 <input
@@ -81,13 +81,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-900/50 border border-purple-500/30 rounded-lg text-white focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all"
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-blue-500/30 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="email" className="block text-gray-300 mb-2">
                   Email
                 </label>
                 <input
@@ -97,13 +97,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-900/50 border border-purple-500/30 rounded-lg text-white focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all"
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-blue-500/30 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="message" className="block text-gray-300 mb-2">
                   Message
                 </label>
                 <textarea
@@ -113,16 +113,16 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-slate-900/50 border border-purple-500/30 rounded-lg text-white focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all resize-none"
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-blue-500/30 rounded-lg text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 flex items-center justify-center gap-2"
+                className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2"
               >
-                <Send size={20} />
+                <Send size={18} />
                 Send Message
               </button>
             </form>
@@ -136,8 +136,8 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div className="bg-gradient-to-br from-slate-900/50 to-purple-900/20 p-8 rounded-2xl border border-purple-500/20 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-white mb-6">Let&apos;s Connect</h3>
+            <div className="bg-slate-900/50 p-8 rounded-lg border border-blue-500/20 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-blue-300 mb-6">Contact Info</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 I&apos;m always interested in hearing about new projects and opportunities. 
                 Whether you have a question or just want to say hi, feel free to reach out!
@@ -145,12 +145,12 @@ const Contact = () => {
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4 text-gray-300">
-                  <div className="w-10 h-10 bg-purple-600/20 rounded-lg flex items-center justify-center">
-                    <Mail className="text-purple-400" size={20} />
+                  <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                    <Mail className="text-blue-400" size={20} />
                   </div>
                   <div>
                     <div className="text-sm text-gray-400">Email</div>
-                    <div className="text-white font-medium">pierrick.dossin@gmail.com</div>
+                    <div className="text-white">pierrick.dossin@gmail.com</div>
                   </div>
                 </div>
 
@@ -160,14 +160,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-400">Location</div>
-                    <div className="text-white font-medium">Meise, Flemish Brabant</div>
+                    <div className="text-white">Meise, Flemish Brabant</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-900/50 to-purple-900/20 p-8 rounded-2xl border border-purple-500/20 backdrop-blur-sm">
-              <h3 className="text-xl font-bold text-white mb-6">Follow Me</h3>
+            <div className="bg-slate-900/50 p-8 rounded-lg border border-blue-500/20 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-blue-300 mb-6">Follow Me</h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((link) => (
                   <a
@@ -175,10 +175,10 @@ const Contact = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 bg-slate-900/50 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105 group"
+                    className="flex items-center gap-3 p-4 bg-slate-800/50 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all group hover:bg-blue-500/5"
                   >
-                    <link.icon className="text-purple-400 group-hover:text-purple-300 transition-colors" size={24} />
-                    <span className="text-gray-300 group-hover:text-white transition-colors font-medium">
+                    <link.icon className="text-blue-400 group-hover:text-blue-300 transition-colors" size={20} />
+                    <span className="text-gray-300 group-hover:text-white transition-colors">
                       {link.label}
                     </span>
                   </a>
@@ -186,11 +186,11 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-6 rounded-2xl border border-purple-500/30">
+            <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 p-6 rounded-lg border border-blue-500/30">
               <p className="text-gray-300 text-center">
-                <span className="text-purple-400 font-semibold">Open to opportunities!</span>
+                <span className="text-blue-400 font-medium">Open to opportunities</span>
                 <br />
-                Currently available for freelance projects and full-time positions.
+                Available for freelance projects and full-time positions.
               </p>
             </div>
           </motion.div>

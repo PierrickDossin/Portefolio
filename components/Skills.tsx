@@ -77,14 +77,13 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Technical Skills</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Technical Skills
+            </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern data solutions
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -95,10 +94,10 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: categoryIndex * 0.1 }}
-              className="bg-gradient-to-br from-slate-900/50 to-purple-900/20 p-6 rounded-2xl border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/50 transition-all"
+              whileHover={{ y: -5 }}
+              className="bg-slate-900/50 p-6 rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all backdrop-blur-sm"
             >
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                <span className="w-2 h-2 bg-purple-500 rounded-full" />
+              <h3 className="text-lg font-semibold text-blue-300 mb-6">
                 {group.title}
               </h3>
 
@@ -106,20 +105,20 @@ const Skills = () => {
                 {group.skills.map((skill, skillIndex) => (
                   <div key={skill.id}>
                     <div className="flex justify-between mb-2">
-                      <span className="text-gray-300 text-sm font-medium">
+                      <span className="text-gray-300 text-sm">
                         {skill.name}
                       </span>
-                      <span className="text-purple-400 text-sm font-semibold">
+                      <span className="text-blue-400 text-sm">
                         {skill.level}%
                       </span>
                     </div>
-                    <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         viewport={{ once: true }}
                         transition={{ delay: categoryIndex * 0.1 + skillIndex * 0.05, duration: 1 }}
-                        className="h-full bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"
+                        className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
                       />
                     </div>
                   </div>
@@ -128,32 +127,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Additional education & expertise section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-gradient-to-r from-purple-900/30 to-pink-900/30 p-8 rounded-2xl border border-purple-500/30"
-        >
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
-            Education & Expertise
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div>
-              <div className="text-3xl font-bold gradient-text mb-2">Data Engineering</div>
-              <p className="text-gray-400 text-sm">ETL/ELT, Pipeline Architecture, Cloud Integration</p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold gradient-text mb-2">Machine Learning</div>
-              <p className="text-gray-400 text-sm">Predictive Models, Computer Vision, AI Systems</p>
-            </div>
-            <div>
-              <div className="text-3xl font-bold gradient-text mb-2">Full-Stack Dev</div>
-              <p className="text-gray-400 text-sm">React, Spring Boot, 3D Graphics, IoT</p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
