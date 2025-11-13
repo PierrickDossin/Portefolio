@@ -159,11 +159,10 @@ public class DataInitializationService implements CommandLineRunner {
         skillRepository.save(createSkill("ETL/ELT", Skill.SkillCategory.DATA_ENGINEERING, 65, 5));
 
         // Cloud & Infrastructure
-        skillRepository.save(createSkill("AWS (S3, Redshift, EMR)", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 58, 1));
-        skillRepository.save(createSkill("Snowflake", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 52, 2));
-        skillRepository.save(createSkill("Docker & Kubernetes", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 56, 3));
-        skillRepository.save(createSkill("Terraform", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 50, 4));
-        skillRepository.save(createSkill("Azure Data Factory", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 50, 5));
+        skillRepository.save(createSkill("Snowflake", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 52, 1));
+        skillRepository.save(createSkill("Docker & Kubernetes", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 56, 2));
+        skillRepository.save(createSkill("Terraform", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 50, 3));
+        skillRepository.save(createSkill("Azure Data Factory", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 50, 4));
 
         // Programming & Databases
         skillRepository.save(createSkill("Python", Skill.SkillCategory.PROGRAMMING_DATABASES, 68, 1));
