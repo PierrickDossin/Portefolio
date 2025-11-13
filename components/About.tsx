@@ -5,7 +5,7 @@ import { Database, TrendingUp, Zap, Award } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: Database, label: "Projects Completed", value: "7+" },
+    { icon: Database, label: "Projects Completed", value: "10+" },
     { icon: TrendingUp, label: "Years Experience", value: "1" },
     { icon: Zap, label: "Technologies Used", value: "15+" },
     { icon: Award, label: "Year of Study", value: "3rd" },
@@ -46,16 +46,42 @@ const About = () => {
               building data pipelines, full-stack applications, and machine learning solutions across 
               healthcare, gambling, and technology sectors.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
-              My work involves creating scalable data infrastructure, implementing ETL processes, 
-              and developing applications that solve real problems. I served as a Product Owner for 
-              The Fish Gambling Platform, where I bridged technical and business requirements.
-            </p>
-            <p className="text-gray-400 leading-relaxed mb-4">
-              Beyond technical skills, I bring strong communication, problem-solving, and leadership 
-              abilities. I&apos;ve taught courses to elderly people on internet usage and PC basics, 
-              and have experience in web development and business analysis. I&apos;m particularly 
-              interested in how data engineering intersects with business operations.
+            
+            <h3 className="text-xl font-semibold text-white mb-3 mt-6">Key Experiences & Soft Skills</h3>
+            <ul className="text-gray-400 leading-relaxed space-y-2 mb-4">
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                <span>Served as <strong className="text-gray-300">Product Owner</strong> for The Fish Gambling Platform, bridging technical and business requirements</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                <span>Applied <strong className="text-gray-300">Scrum methodology</strong>, sticking to scope and managing agile workflows</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                <span>Led projects as <strong className="text-gray-300">Scrum Master</strong>, facilitating team collaboration and sprint planning</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                <span>Experienced in <strong className="text-gray-300">story writing</strong> and breaking down complex features into actionable tasks</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                <span>Taught courses to elderly people on internet usage and PC basics, developing <strong className="text-gray-300">teaching and patience skills</strong></span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                <span>Strong <strong className="text-gray-300">problem-solving</strong> and analytical thinking abilities</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-2">•</span>
+                <span>Experience in <strong className="text-gray-300">web development and business analysis</strong></span>
+              </li>
+            </ul>
+            
+            <p className="text-gray-400 leading-relaxed">
+              I&apos;m particularly interested in how data engineering intersects with business operations, 
+              combining technical expertise with practical business management skills.
             </p>
             <div className="flex gap-4 pt-4">
               <a
