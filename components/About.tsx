@@ -6,7 +6,7 @@ import { Database, TrendingUp, Zap, Award } from "lucide-react";
 const About = () => {
   const stats = [
     { icon: Database, label: "Projects Completed", value: "7+" },
-    { icon: TrendingUp, label: "Years Experience", value: "2" },
+    { icon: TrendingUp, label: "Years Experience", value: "1" },
     { icon: Zap, label: "Technologies Used", value: "15+" },
     { icon: Award, label: "Year of Study", value: "3rd" },
   ];
@@ -42,13 +42,20 @@ const About = () => {
             <h3 className="text-xl font-semibold text-white mb-4">Background</h3>
             <p className="text-gray-400 leading-relaxed mb-4">
               I&apos;m a 3rd year Applied Computer Science student at UCLL (associated with KU Leuven), 
-              focusing on Data Engineering and Business Management. I have 2 years of practical experience 
-              building data pipelines, full-stack applications, and machine learning solutions.
+              focusing on Data Engineering and Business Management. I have 1 year of practical experience 
+              building data pipelines, full-stack applications, and machine learning solutions across 
+              healthcare, gambling, and technology sectors.
             </p>
             <p className="text-gray-400 leading-relaxed mb-4">
               My work involves creating scalable data infrastructure, implementing ETL processes, 
-              and developing applications that solve real problems. I&apos;m particularly interested 
-              in how data engineering intersects with business operations.
+              and developing applications that solve real problems. I served as a Product Owner for 
+              The Fish Gambling Platform, where I bridged technical and business requirements.
+            </p>
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Beyond technical skills, I bring strong communication, problem-solving, and leadership 
+              abilities. I&apos;ve taught courses to elderly people on internet usage and PC basics, 
+              and have experience in web development and business analysis. I&apos;m particularly 
+              interested in how data engineering intersects with business operations.
             </p>
             <div className="flex gap-4 pt-4">
               <a
