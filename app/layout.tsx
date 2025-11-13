@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Data Engineer Portfolio | Modern Data Solutions",
+  title: "Pierrick Dossin | Data Engineer Portfolio",
   description: "Professional portfolio showcasing cutting-edge data engineering projects, pipeline architectures, and analytics solutions.",
   keywords: ["data engineer", "portfolio", "ETL", "data pipelines", "big data", "analytics"],
 };
