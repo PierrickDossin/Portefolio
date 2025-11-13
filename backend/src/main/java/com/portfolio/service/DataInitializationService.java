@@ -152,46 +152,46 @@ public class DataInitializationService implements CommandLineRunner {
         log.info("Creating sample skills...");
 
         // Data Engineering Skills
-        skillRepository.save(createSkill("Apache Spark", Skill.SkillCategory.DATA_ENGINEERING, 95, 1));
-        skillRepository.save(createSkill("Apache Kafka", Skill.SkillCategory.DATA_ENGINEERING, 90, 2));
-        skillRepository.save(createSkill("Apache Airflow", Skill.SkillCategory.DATA_ENGINEERING, 92, 3));
-        skillRepository.save(createSkill("dbt", Skill.SkillCategory.DATA_ENGINEERING, 88, 4));
-        skillRepository.save(createSkill("ETL/ELT", Skill.SkillCategory.DATA_ENGINEERING, 95, 5));
+        skillRepository.save(createSkill("Apache Spark", Skill.SkillCategory.DATA_ENGINEERING, 75, 1));
+        skillRepository.save(createSkill("Apache Kafka", Skill.SkillCategory.DATA_ENGINEERING, 70, 2));
+        skillRepository.save(createSkill("Apache Airflow", Skill.SkillCategory.DATA_ENGINEERING, 72, 3));
+        skillRepository.save(createSkill("dbt", Skill.SkillCategory.DATA_ENGINEERING, 68, 4));
+        skillRepository.save(createSkill("ETL/ELT", Skill.SkillCategory.DATA_ENGINEERING, 80, 5));
 
         // Cloud & Infrastructure
-        skillRepository.save(createSkill("AWS (S3, Redshift, EMR)", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 93, 1));
-        skillRepository.save(createSkill("Snowflake", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 90, 2));
-        skillRepository.save(createSkill("Docker & Kubernetes", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 87, 3));
-        skillRepository.save(createSkill("Terraform", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 85, 4));
-        skillRepository.save(createSkill("Azure Data Factory", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 82, 5));
+        skillRepository.save(createSkill("AWS (S3, Redshift, EMR)", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 70, 1));
+        skillRepository.save(createSkill("Snowflake", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 65, 2));
+        skillRepository.save(createSkill("Docker & Kubernetes", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 68, 3));
+        skillRepository.save(createSkill("Terraform", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 60, 4));
+        skillRepository.save(createSkill("Azure Data Factory", Skill.SkillCategory.CLOUD_INFRASTRUCTURE, 55, 5));
 
         // Programming & Databases
-        skillRepository.save(createSkill("Python", Skill.SkillCategory.PROGRAMMING_DATABASES, 95, 1));
-        skillRepository.save(createSkill("SQL", Skill.SkillCategory.PROGRAMMING_DATABASES, 98, 2));
-        skillRepository.save(createSkill("Java", Skill.SkillCategory.PROGRAMMING_DATABASES, 92, 3));
-        skillRepository.save(createSkill("PostgreSQL", Skill.SkillCategory.PROGRAMMING_DATABASES, 92, 4));
-        skillRepository.save(createSkill("MongoDB", Skill.SkillCategory.PROGRAMMING_DATABASES, 85, 5));
+        skillRepository.save(createSkill("Python", Skill.SkillCategory.PROGRAMMING_DATABASES, 85, 1));
+        skillRepository.save(createSkill("SQL", Skill.SkillCategory.PROGRAMMING_DATABASES, 88, 2));
+        skillRepository.save(createSkill("Java", Skill.SkillCategory.PROGRAMMING_DATABASES, 78, 3));
+        skillRepository.save(createSkill("PostgreSQL", Skill.SkillCategory.PROGRAMMING_DATABASES, 82, 4));
+        skillRepository.save(createSkill("MongoDB", Skill.SkillCategory.PROGRAMMING_DATABASES, 70, 5));
 
         // Analytics & ML
-        skillRepository.save(createSkill("Data Modeling", Skill.SkillCategory.ANALYTICS_ML, 93, 1));
-        skillRepository.save(createSkill("Pandas & NumPy", Skill.SkillCategory.ANALYTICS_ML, 90, 2));
-        skillRepository.save(createSkill("TensorFlow", Skill.SkillCategory.ANALYTICS_ML, 78, 3));
-        skillRepository.save(createSkill("Tableau/PowerBI", Skill.SkillCategory.ANALYTICS_ML, 85, 4));
-        skillRepository.save(createSkill("MLflow", Skill.SkillCategory.ANALYTICS_ML, 80, 5));
+        skillRepository.save(createSkill("Data Modeling", Skill.SkillCategory.ANALYTICS_ML, 75, 1));
+        skillRepository.save(createSkill("Pandas & NumPy", Skill.SkillCategory.ANALYTICS_ML, 80, 2));
+        skillRepository.save(createSkill("TensorFlow", Skill.SkillCategory.ANALYTICS_ML, 65, 3));
+        skillRepository.save(createSkill("Tableau/PowerBI", Skill.SkillCategory.ANALYTICS_ML, 72, 4));
+        skillRepository.save(createSkill("MLflow", Skill.SkillCategory.ANALYTICS_ML, 58, 5));
 
         // Development Tools
-        skillRepository.save(createSkill("Git & GitHub", Skill.SkillCategory.DEVELOPMENT_TOOLS, 92, 1));
-        skillRepository.save(createSkill("CI/CD Pipelines", Skill.SkillCategory.DEVELOPMENT_TOOLS, 88, 2));
-        skillRepository.save(createSkill("Linux/Bash", Skill.SkillCategory.DEVELOPMENT_TOOLS, 90, 3));
-        skillRepository.save(createSkill("VS Code", Skill.SkillCategory.DEVELOPMENT_TOOLS, 95, 4));
-        skillRepository.save(createSkill("Jupyter Notebooks", Skill.SkillCategory.DEVELOPMENT_TOOLS, 93, 5));
+        skillRepository.save(createSkill("Git & GitHub", Skill.SkillCategory.DEVELOPMENT_TOOLS, 85, 1));
+        skillRepository.save(createSkill("CI/CD Pipelines", Skill.SkillCategory.DEVELOPMENT_TOOLS, 68, 2));
+        skillRepository.save(createSkill("Linux/Bash", Skill.SkillCategory.DEVELOPMENT_TOOLS, 75, 3));
+        skillRepository.save(createSkill("VS Code", Skill.SkillCategory.DEVELOPMENT_TOOLS, 90, 4));
+        skillRepository.save(createSkill("Jupyter Notebooks", Skill.SkillCategory.DEVELOPMENT_TOOLS, 82, 5));
 
         // Web Development
-        skillRepository.save(createSkill("React & Next.js", Skill.SkillCategory.WEB_DEVELOPMENT, 88, 1));
-        skillRepository.save(createSkill("TypeScript", Skill.SkillCategory.WEB_DEVELOPMENT, 85, 2));
-        skillRepository.save(createSkill("Spring Boot", Skill.SkillCategory.WEB_DEVELOPMENT, 90, 3));
-        skillRepository.save(createSkill("Tailwind CSS", Skill.SkillCategory.WEB_DEVELOPMENT, 90, 4));
-        skillRepository.save(createSkill("REST APIs", Skill.SkillCategory.WEB_DEVELOPMENT, 92, 5));
+        skillRepository.save(createSkill("React & Next.js", Skill.SkillCategory.WEB_DEVELOPMENT, 78, 1));
+        skillRepository.save(createSkill("TypeScript", Skill.SkillCategory.WEB_DEVELOPMENT, 75, 2));
+        skillRepository.save(createSkill("Spring Boot", Skill.SkillCategory.WEB_DEVELOPMENT, 72, 3));
+        skillRepository.save(createSkill("Tailwind CSS", Skill.SkillCategory.WEB_DEVELOPMENT, 80, 4));
+        skillRepository.save(createSkill("REST APIs", Skill.SkillCategory.WEB_DEVELOPMENT, 82, 5));
 
         log.info("Created 30 sample skills");
     }
